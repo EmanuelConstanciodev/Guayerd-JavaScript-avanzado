@@ -1,0 +1,20 @@
+.red{
+    background-color: red;
+}
+
+
+.blue{
+    background-color: blue;
+}
+
+.violet{
+    background-color: blueviolet;
+}
+
+.green{
+    background-color: green;
+}
+
+container1{
+    display: block;
+}

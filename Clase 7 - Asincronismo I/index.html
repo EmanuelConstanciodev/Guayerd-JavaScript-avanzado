@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1 class="center-align">Pokemón</h1>
+
+  <blockquote class="flow-text container">
+    En el mundo pokemón hay varios tipos de ellos escondidos en los lugares más reconditos de este planeta, por ahora
+    solo pudimos obtener un pequeño catálogo de ellos. El último pokemón registrado es :Calyrex con el número 898
+  </blockquote>
+
+
+  <div class="flow-text container buscador">
+    <span class="">Animate a buscar alguno de ellos ingresando un número en el buscador</span>
+    <input type="number">
+    <button class="btn pink darken-1" onclick="porNumero()">Buscar</button>
+    <button class="btn purple darken-1" id="boton" onclick="bucle()">Ver todos</button>
+  </div>
+
+
+  <div class="row container" id="lista">
+  </div>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

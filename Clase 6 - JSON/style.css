@@ -1,0 +1,37 @@
+
+body{
+    background-color:#20dad9;
+}
+
+
+.borde {
+    border: 4px black;
+    color: white;
+   
+
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    float: left;
+    margin: 20px;
+    position:relative;
+}
+
+
+.borde p {
+    font-size: 40px;
+    color: black;
+}
+
+
+
+.borde .avatar{
+
+    position:absolute;
+
+    width: 40%;
+
+
+
+}

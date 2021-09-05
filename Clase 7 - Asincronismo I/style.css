@@ -1,0 +1,18 @@
+
+
+ body {
+   font: 100% Helvetica, sans-serif;
+   color: #333;
+  background-color: #03a9f4 ;
+   
+ }
+ 
+.buscador{
+
+  top: 20px;
+ }
+
+ .buscarTodos{
+   bottom: 500px;
+  
+ }
