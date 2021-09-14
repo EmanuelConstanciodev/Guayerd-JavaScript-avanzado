@@ -1,0 +1,21 @@
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  border: 2px blue solid;
+}
+/*# sourceMappingURL=main.css.map */

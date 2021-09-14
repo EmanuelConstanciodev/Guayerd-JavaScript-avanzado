@@ -39,17 +39,25 @@
 //3) Vamos a crear una app para que cada vez que aprete un botón, me muestre un usuario aleatorio utilizando la siguiente API: 
 // Mostrar 3 o 4 datos del usuario.
 
-// const llamar = ()  =>{
-//     const api = fetch('https://randomuser.me/api');
+const llamar = ()  =>{
+    const api = fetch('https://randomuser.me/api');
 
-// api
-//     .then( res => res.json())
-
-//     .then( data => document.querySelector('p').innerHTML = data.results[0].name.first) 
-//     .catch( error => console.log(error))
+api
+    .then( res => res.json())
+    .then( data => document.querySelector('p').innerHTML = data.results[0].name.first) 
+    .catch( error => console.log(error))
 
     
-// }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -68,20 +76,21 @@ const toPlay = () => {
         console.log(value)
         let botPlayer = Math.trunc(Math.random() * (4 - 1) + 1);
         botPlayer = getValue(botPlayer);
+        
         console.log(botPlayer);
-        //value >= 18 ? resolve('Puede pasar.') : reject('No puede pasar');
+        
+        mind(value,botPlayer)
 
-
-        switch (value) {
-            case value === botPlayer:
-                console.log('Empate')
-                break;
-            case value === botPlayer:
-                console.log('Empate')
-                break;
-            default:
-                break;
-        }
+        // switch (value) {
+        //     case value === botPlayer:
+        //         console.log('Empate')
+        //         break;
+        //     case value === botPlayer:
+        //         console.log('Empate')
+        //         break;
+        //     default:
+        //         break;
+        // }
 
 
 
@@ -108,41 +117,77 @@ const getValue = value => {
     }
 }
 
-//5) Crear un cronómetro. Puede iniciar apretando un botón o con el evento que prefieran y empezar a contar segundos y minutos. Arranca en 0 y va subiendo infinitamente.
 
-const cronometer = () => {
 
-    let seconds = 0;
-    let minuts = 0;
-    let hours = 0;
+const mind = (value,botPlayer) => {
+
+    switch (value,botPlayer) {
+
+        case value === botPlayer:
+            console.log('empate')
+            break;
     
-    const mensaje = new Promise((resolve,reject) => 
+            
+        case value === 'tijera' && botPlayer === 'piedra':
+            console.log('ganó la máquina')
+            break;
+            
+        case value === 'papel' && botPlayer === 'tijera':
+            console.log('ganó la máquina')
+            break;
 
-        setTimeout(resolve,1000)
+            
+        case value === 'pieda' && botPlayer === 'papel':
+            console.log('ganó la máquina')
+            break;
 
-    )
-    .then( () => console.log("Primer intento completado.."))
-
-
-    const mensaje2 = new Promise((resolve,reject) => 
-
-        setTimeout(resolve,2000)
-
-    )
-    .then( () => console.log("Segundo intento completado.."))
-
-
-    const mensaje3 = new Promise((resolve,reject) => 
-
-        setTimeout(resolve,4000)
-
-    )
-    .then( () => console.log("Tarea resuelta!"))
-
-
-
-
+        default:
+            console.log('Ganaste')
+            break;
+    }
 
 
 
 }
+
+
+
+
+// //5) Crear un cronómetro. Puede iniciar apretando un botón o con el evento que prefieran y empezar a contar segundos y minutos. Arranca en 0 y va subiendo infinitamente.
+
+// const cronometer = () => {
+
+//     let seconds = 0;
+//     let minuts = 0;
+//     let hours = 0;
+    
+//     const mensaje = new Promise((resolve,reject) => 
+
+//         setTimeout(resolve,1000)
+
+//     )
+//     .then( () => console.log("Primer intento completado.."))
+
+
+//     const mensaje2 = new Promise((resolve,reject) => 
+
+//         setTimeout(resolve,2000)
+
+//     )
+//     .then( () => console.log("Segundo intento completado.."))
+
+
+//     const mensaje3 = new Promise((resolve,reject) => 
+
+//         setTimeout(resolve,4000)
+
+//     )
+//     .then( () => console.log("Tarea resuelta!"))
+
+
+
+
+
+
+
+// }
